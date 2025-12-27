@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Wordlists</h1>
+
+<div id="wordlists">
+  <% @wordlists.each do |wordlist| %>
+    <%= render wordlist %>
+    <p>
+      <%= link_to "Show this wordlist", wordlist %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New wordlist", new_wordlist_path %>

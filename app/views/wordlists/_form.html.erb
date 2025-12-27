@@ -1,0 +1,27 @@
+<%= form_with(model: wordlist) do |form| %>
+  <% if wordlist.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(wordlist.errors.count, "error") %> prohibited this wordlist from being saved:</h2>
+
+      <ul>
+        <% wordlist.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :english_word, style: "display: block" %>
+    <%= form.text_field :english_word %>
+  </div>
+
+  <div>
+    <%= form.label :japanese_ward, style: "display: block" %>
+    <%= form.text_field :japanese_ward %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @wordlist %>
+
+<div>
+  <%= link_to "Edit this wordlist", edit_wordlist_path(@wordlist) %> |
+  <%= link_to "Back to wordlists", wordlists_path %>
+
+  <%= button_to "Destroy this wordlist", @wordlist, method: :delete %>
+</div>
